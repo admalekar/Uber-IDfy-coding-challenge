@@ -31,7 +31,8 @@ var infowindow = new google.maps.InfoWindow();
 
       });
        google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(entry.locationdescription);
+    infowindow.setContent('<div><strong>' + entry.applicant + '</strong><br>' +
+                'Address: ' + entry.locationdescription + '</div>');
     infowindow.open(map, this);
   });
 
